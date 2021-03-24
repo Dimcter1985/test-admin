@@ -1,0 +1,12 @@
+.MuiTypography-displayBlock,
+.MuiCardContent-root {
+  text-align: center;
+}
+
+@media all and (max-width: 600px) {
+
+  .MuiTypography-displayBlock,
+  .MuiCardContent-root {
+    text-align: left;
+  }
+}
