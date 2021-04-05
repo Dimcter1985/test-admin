@@ -1,17 +1,20 @@
 import * as React from "react";
-import { useMediaQuery } from '@material-ui/core';
+// import { useMediaQuery } from '@material-ui/core';
+import Paginator from'../Paginator'
+// import PostPanel from'../PostPanel'
+import PostCard from'../PostCard'
 import { 
     List, 
-    Datagrid, 
-    TextField, 
-    ReferenceField, 
-    EditButton, 
-    ChipField,
+    // Datagrid, 
+    // TextField, 
+    // ReferenceField, 
+    // EditButton, 
+    // ChipField,
     Filter,
     TextInput,
     ReferenceInput,
     SelectInput,
-    SimpleList
+    // SimpleList
 } from 'react-admin';
 
 const PostFilter = (props) => (
@@ -24,10 +27,10 @@ const PostFilter = (props) => (
 );
 
 export const PostList = props => {
-    const isMobile = useMediaQuery('(max-width:600px)');
+    // const isMobile = useMediaQuery('(max-width:600px)');
 
-    return  (<List filters={<PostFilter />} {...props}>
-                {isMobile ? 
+    return  (<List filters={<PostFilter />} {...props} title="Посты" pagination={<Paginator />}>
+                {/* {isMobile ? 
                     (
                     <SimpleList
                     primaryText={record => record.id}
@@ -36,7 +39,7 @@ export const PostList = props => {
                     )
                     : 
                     (
-                    <Datagrid>
+                    <Datagrid expand={<PostPanel />}>
                         <ChipField source="id" />
                         <ReferenceField source="userId" reference="users">
                             <TextField source="name" />
@@ -44,7 +47,7 @@ export const PostList = props => {
                         <TextField source="title" />
                         <EditButton />
                     </Datagrid>
-                    )}
-
+                    )} */}
+                <PostCard />
             </List>)
 };

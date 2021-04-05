@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiTable-root {
+  background: gray;
+}
+
+.MuiTypography-displayBlock,
+.MuiCardContent-root {
+  text-align: center;
+}
+
+@media all and (max-width: 600px) {
+
+  .MuiTypography-displayBlock,
+  .MuiCardContent-root {
+    text-align: left;
+  }
+}
+
+@media (max-width: 959.95px) {
+  .RaLayout-content-4 {
+    padding-left: 5px;
+  }
+}
